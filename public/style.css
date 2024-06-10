@@ -1,0 +1,134 @@
+/* Reset một số kiểu dáng mặc định của trình duyệt */
+body, h1, h2, h3, p, div, a, img, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF;
+}
+
+.poster {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.poster img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 20px); /* Điều chỉnh để kích thước lớn hơn */
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.img-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-info {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.prev-next-button {
+    display: inline-block;
+    width: 100px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin: 0 10px;
+    margin-bottom: 20px; /* Thêm khoảng cách dưới */
+}
+
+
+.prev-next-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query để điều chỉnh hiển thị trên màn hình nhỏ hơn */
+@media (max-width: 1366px) {
+    .img-container {
+        width: calc(50% - 20px); /* 2 hình ảnh trên mỗi hàng, trừ đi khoảng cách */
+    }
+}
