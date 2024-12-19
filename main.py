@@ -38,6 +38,6 @@ def download_images_from_url(information_id, url, folder_path):
 images_folder = "downloaded_images"
 create_directory(images_folder)
 # min 90
-for information_id in range(9493, 9200, -1):
+for information_id in range(9650, 9200, -1):
     url = f"https://en.toram.jp/information/detail/?information_id={information_id}"
     download_images_from_url(information_id, url, images_folder)
